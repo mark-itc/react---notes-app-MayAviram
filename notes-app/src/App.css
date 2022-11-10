@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.notesform {
+  padding: 20px;
+}
+.notesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  height: 100%;
+  grid-gap: 1rem;
+  margin: auto;
+  width: 60%;
+}
+
+.note {
+  background-color: #fcf7ef;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.addNoteButton {
+  width: 100px;
+  height: 30px;
+  background-color: lightgray;
+  border-radius: 3px;
+  border: 1px solid gray;
+}
