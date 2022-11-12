@@ -1,13 +1,20 @@
+import React from "react";
 import Note from "./Note";
 
 function NotesList(props) {
-  const { listOfNotes } = props;
+  const { listOfNotes, onClickDeleteNote } = props;
 
   const isEmptyNotesList = listOfNotes.length === 0;
 
   const createList = () => {
     return listOfNotes.map((item, index) => (
-      <Note key={index} textOfNote={item.text} dateToday={item.date} />
+      <Note
+        key={`note${index}`}
+        noteIndex={index}
+        textOfNote={item.text}
+        dateToday={item.date}
+        onClickDeleteNote={onClickDeleteNote}
+      />
     ));
   };
 

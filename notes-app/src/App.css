@@ -19,6 +19,10 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid gray;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .addNoteButton {
@@ -27,4 +31,17 @@
   background-color: lightgray;
   border-radius: 3px;
   border: 1px solid gray;
+}
+
+.deleteNoteButton {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 3px;
+  border: 1px solid gray;
+}
+
+button:hover {
+  background-color: gray;
+  color: white;
 }

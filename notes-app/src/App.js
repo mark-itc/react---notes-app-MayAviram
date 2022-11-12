@@ -1,22 +1,29 @@
+import React from "react";
 import "./App.css";
 import { useState } from "react";
-import NotesList from "./NotesList";
-import FormList from "./FormList";
+import NotesList from "./components/NotesList";
+import FormList from "./components/FormList";
+import moment from "moment";
 
 function App() {
   const [notesList, setNotesList] = useState([]);
-  const [dateToday, SetDateToday] = useState(new Date().toString());
+  const date = moment().format("MMM Do LT");
+  const [dateToday, SetDateToday] = useState(date);
 
   const onAddNote = (e) => {
     e.preventDefault();
-    SetDateToday(new Date().toString());
+    SetDateToday(date);
     setNotesList([{ text: "Example note", date: dateToday }, ...notesList]);
   };
-
+  const onDeleteNote = (index) => {
+    const filterListOfNotes = [...notesList];
+    filterListOfNotes.splice(index, 1);
+    setNotesList(filterListOfNotes);
+  };
   return (
     <div className="App">
       <FormList onAddNoteClick={onAddNote} />
-      <NotesList listOfNotes={notesList} />
+      <NotesList listOfNotes={notesList} onClickDeleteNote={onDeleteNote} />
     </div>
   );
 }
