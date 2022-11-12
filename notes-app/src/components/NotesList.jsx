@@ -11,6 +11,7 @@ function NotesList(props) {
       <Note
         key={`note${index}`}
         noteIndex={index}
+        titleOfNote={item.title}
         textOfNote={item.text}
         dateToday={item.date}
         onClickDeleteNote={onClickDeleteNote}

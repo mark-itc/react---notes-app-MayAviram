@@ -20,6 +20,8 @@
   border-radius: 10px;
   border: 1px solid gray;
   text-align: left;
+}
+.dateAndButton {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,4 +46,8 @@
 button:hover {
   background-color: gray;
   color: white;
+}
+
+.titleNote {
+  font-weight: bolder;
 }

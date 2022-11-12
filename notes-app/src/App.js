@@ -13,7 +13,10 @@ function App() {
   const onAddNote = (e) => {
     e.preventDefault();
     SetDateToday(date);
-    setNotesList([{ text: "Example note", date: dateToday }, ...notesList]);
+    setNotesList([
+      { title: "Note title", text: "Example note", date: dateToday },
+      ...notesList,
+    ]);
   };
   const onDeleteNote = (index) => {
     const filterListOfNotes = [...notesList];

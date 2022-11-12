@@ -1,7 +1,13 @@
 import React from "react";
 
 function Note(props) {
-  const { textOfNote, dateToday, noteIndex, onClickDeleteNote } = props;
+  const {
+    titleOfNote,
+    textOfNote,
+    dateToday,
+    noteIndex,
+    onClickDeleteNote,
+  } = props;
 
   const deleteConfirmation = () => {
     if (window.confirm("Are you sure you want to delete your note?")) {
@@ -10,13 +16,10 @@ function Note(props) {
   };
   return (
     <div className="note">
-      <div className="noteContainer">
+      <div className="noteContainer dateAndButton">
         <div className="dateNote" style={{ fontSize: 10, marginBottom: 10 }}>
           {dateToday}
         </div>
-        <div className="textNote">{textOfNote}</div>
-      </div>
-      <div className="noteContainer">
         <button
           className="deleteNoteButton"
           onClick={() => {
@@ -25,6 +28,10 @@ function Note(props) {
         >
           X
         </button>
+      </div>
+      <div className="noteContainer">
+        <div className="titleNote">{titleOfNote}</div>
+        <div className="textNote">{textOfNote}</div>
       </div>
     </div>
   );
