@@ -21,6 +21,10 @@
   border: 1px solid gray;
   text-align: left;
 }
+
+.modalnote {
+  margin-bottom: 20px;
+}
 .dateAndButton {
   display: flex;
   justify-content: space-between;
